@@ -8,9 +8,7 @@ library(visNetwork)
 library(DT)
 source("suppfunctions.R")
 
-data <- readRDS("mardy_data.rds")
-migration_codebook_english <- data[[2]]
-data <- data[[1]]
+data <- readRDS("mardy_data.rds")[[1]]
 
 ui <- dashboardPage(
           dashboardHeader(title = "Project Mardy Demo*"), 
@@ -86,7 +84,7 @@ server <- server <- function(input, output, session){
                                         tidyr::separate_rows(claimvalues, sep = ",") %>%
                                         dplyr::mutate(claimvalues = gsub("\\D", "", claimvalues)) %>%
                                         dplyr::filter(!grepl("[1-9]00|999", claimvalues)) %>%
-                                        #dplyr::mutate(label = suppressWarnings(lookup_codes(claimvalues))) %>%
+                                        dplyr::mutate(label = suppressWarnings(lookup_codes(claimvalues))) %>%
                                         as.data.frame()
                     }
                     if(all(input$var != "all")){

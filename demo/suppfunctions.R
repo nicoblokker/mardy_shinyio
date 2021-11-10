@@ -60,7 +60,7 @@ two2one <- function(df, ret = "graph", iso = TRUE){
           }
 }
 
-
+migration_codebook_english <- readRDS("mardy_data.rds")[[2]]
 lookup_codes <- function(code, language = "english"){
           find_c <- function(code){
                     label <- migration_codebook_english$description[which(migration_codebook_english$sub == code)]
