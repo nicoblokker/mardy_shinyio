@@ -1,6 +1,6 @@
 # mardy_shinyio
 
-Demo version of mardyr2 app hosted on [shiny.io](https://mardy.shinyapps.io/mardy/) (for details refer to <https://github.com/nicoblokker/mardyr2>).
+Demo version of mardyr2 app hosted on [shinyapps.io](https://mardy.shinyapps.io/mardy/) (for details refer to <https://github.com/nicoblokker/mardyr2>).
 
 This software is affiliated with the following publication ([PDF](https://www.aclweb.org/anthology/2020.lrec-1.115/)):
 
