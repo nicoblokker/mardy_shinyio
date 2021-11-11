@@ -57,13 +57,12 @@ ui <- dashboardPage(
                                                box(selectInput("multi", "show multiplex",choices = c(FALSE,TRUE)), width = 3)
                                       ))
                     ),
-         # hr(),
           tags$div("*This software is affiliated with the following publication:", tags$br() , 
                    "Lapesa, G., Blessing, A., Blokker, N., Dayanik, E., Haunss, S., Kuhn, J., Pado, S.: DEbateNet-mig15: Tracing the 2015 Immigration Debate in Germany Over Time. In: Proceedings of LREC. Marseille, France (2020)."),
          tags$br(), "*For further details see: https://github.com/nicoblokker/mardyr2")
 )
 
-server <- server <- function(input, output, session){
+server <- function(input, output, session){
           tt <- reactiveValues(t = NULL)
           gg <- reactiveValues(g = NULL)
           observe({
